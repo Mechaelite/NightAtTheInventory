@@ -135,7 +135,8 @@ GO
 Create Table GM (
 	GMID int identity(1,1) not null Primary Key, --ID
 	GMName NVARCHAR(50) Not Null, --User Name. Textbox
-	GMPassword CHAR(40) Not null --User password
+	GMPassword CHAR(40) Not null, --User password
+	GMEmail NVARCHAR(50) Not null --User Email
 )
 GO
 
