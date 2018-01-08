@@ -1,5 +1,5 @@
 Create Table MagicWeapons (
-	MaWeaponID int identity(1,1) not null Primary Key, --ID
+	MaWeaponID int not null Primary Key, --ID
 	MaWeaponName NVARCHAR(50) Not Null, --ITEMName. Textbox
 	MaWeaponLevel Int Not Null, --Levels 1 to 100.
 	MaWeaponClass NVARCHAR(100), --Weapon class, bow and pistol are both ranged for example
@@ -19,7 +19,7 @@ GO
 
 
 Create Table MeleeWeapons (
-	MeWeaponID int identity(1,1) not null Primary Key, --ID
+	MeWeaponID int  not null Primary Key, --ID
 	MeWeaponName NVARCHAR(50) Not Null, --ITEMName. Textbox
 	MeWeaponLevel Int Not Null, --Levels 1 to 100.
 	MeWeaponClass NVARCHAR(100), --Weapon class, bow and pistol are both ranged for example
@@ -38,7 +38,7 @@ ADD Constraint CK_MeleeClass Check (MeWeaponClass in ('Sword', 'Dagger', 'Hammer
 GO
 
 Create Table RangedWeapons (
-	RWeaponID int identity(1,1) not null Primary Key, --ID
+	RWeaponID int not null Primary Key, --ID
 	RWeaponName NVARCHAR(50) Not Null, --ITEMName. Textbox
 	RWeaponLevel Int Not Null, --Levels 1 to 100.
 	RWeaponClass NVARCHAR(100), --Weapon class, bow and pistol are both ranged for example
@@ -58,7 +58,7 @@ GO
 
 
 Create Table Armor (
-	ArmorID int identity(1,1) not null Primary Key, --ID
+	ArmorID int  not null Primary Key, --ID
 	ArmorName NVARCHAR(50) Not Null, --ITEMName. Textbox
 	ArmorLevel Int Not Null, --Levels 1 to 100.
 	ArmorDescription NVARCHAR (1500) Not Null, --Self Explanatory. Textbox
@@ -76,7 +76,7 @@ ADD Constraint CK_ArmorType Check (ArmorType in ('Light', 'Medium', 'Heavy'))
 GO
 
 Create Table Misc (
-	ItemID int identity(1,1) not null Primary Key, --ID
+	ItemID int  not null Primary Key, --ID
 	ItemName NVARCHAR(50) Not Null, --ITEMName. Textbox
 	ItemClass NVARCHAR(100), --Stat modifier, Food, Ammo.
 	ItemDescription NVARCHAR (1500) Not Null, --Self Explanatory. Textbox
@@ -92,7 +92,7 @@ GO
 
 
 Create Table Characters (
-	CharacterID int identity(1,1) not null Primary Key, --ID
+	CharacterID int  not null Primary Key, --ID
 	CharacterName NVARCHAR(50) Not Null, --Character Name. Textbox
 	CharacterLvl Int Not Null, --Levels 1 to 100. Dropdown
 	CharacterClass NVARCHAR(100), --Character type that can use it. Checkbox/Dropdown
@@ -133,24 +133,24 @@ Create Table CharacterInventory (
 GO
 
 Create Table GM (
-	GMID int identity(1,1) not null Primary Key, --ID
+	GMID int not null Primary Key, --ID
 	GMName NVARCHAR(50) Not Null, --User Name. Textbox
 	GMPassword CHAR(40) Not null --User password
 )
 GO
 
 Create Table USR (
-	USRID int identity(1,1) not null Primary Key, --ID
+	USRID int not null Primary Key, --ID
 	USRName NVARCHAR(50) Not Null, --User Name. Textbox
 	USRPassword CHAR(40) Not null --User password
 )
 GO
 
 Create Table Game (
-	GameID int identity(1,1) not null Primary Key, --ID
+	GameID int  not null Primary Key, --ID
 	GameName NVARCHAR(50) Not Null, --Game Name. Textbox
-	GGMID int identity(1,1) not null Foreign Key References GM (GMID),
-	GUSRID int identity(1,1) not null Foreign Key References USR (USRID)
+	GGMID int  not null Foreign Key References GM (GMID),
+	GUSRID int  not null Foreign Key References USR (USRID)
 )
 GO
 
