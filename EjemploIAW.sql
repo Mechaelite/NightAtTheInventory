@@ -135,14 +135,16 @@ GO
 Create Table GM (
 	GMID int not null Primary Key, --ID
 	GMName NVARCHAR(50) Not Null, --User Name. Textbox
-	GMPassword CHAR(40) Not null --User password
+	GMPassword CHAR(40) Not null, --User password
+	GMEmail NVARCHAR(50) Not null --User Email
 )
 GO
 
 Create Table USR (
 	USRID int not null Primary Key, --ID
 	USRName NVARCHAR(50) Not Null, --User Name. Textbox
-	USRPassword CHAR(40) Not null --User password
+	USRPassword CHAR(40) Not null,--User password
+	USREmail NVARCHAR(50) Not null --User Email
 )
 GO
 
