@@ -2,16 +2,34 @@
 $page_title = 'Welcome to this Site!';
 include ('./includes/header.html');
 ?>
-<h1 id="mainhead">Big Header</h1>
-<p>This is where you'll put the main page content. This content will differ for each page.</p>
-<p>This is where you'll put the main page content. This content will differ for each page.</p>
-<p>This is where you'll put the main page content. This content will differ for each page.</p>
-<p>This is where you'll put the main page content. This content will differ for each page.</p>
-<h2>Subheader</h2>
-<p>This is where you'll put the main page content. This content will differ for each page.</p>
-<p>This is where you'll put the main page content. This content will differ for each page.</p>
-<p>This is where you'll put the main page content. This content will differ for each page.</p>
-<p>This is where you'll put the main page content. This content will differ for each page.</p>
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js%22%3E"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js%22%3E"></script>
+</head>
+<body>
+
+
+<div class="topnav">
+
+  <a href="#">Logout</a>
+</div>
+<div class="container">
+        <ul>
+            <li><a class="active" href="#home">Weapons</a></li>
+            <li><a href="#news">Armor</a></li>
+            <li><a href="#contact">Misc</a></li>
+            <li><a href="#about">Characters</a></li>
+        </ul>
+
+<div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+</div>
+</div>
+
 <?php
 include ('./includes/footer.html');
 ?>
